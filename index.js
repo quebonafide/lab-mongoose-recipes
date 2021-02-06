@@ -46,25 +46,32 @@ Recipe.create({
 
 Recipe.insertMany(data)
 .then(recipe => {
-  console.log('this recipe was created: ', recipe);
+  console.log('these recipe were created: ', recipe);
 })
 .catch(err => {
   console.log(err);
 })
 
-Recipe.findOneAndUpdate({ title: 'Rigatoni alla Genovese' }, { duration: 100 }, { new: true })
-.then(recipe => {
-    console.log('this recipe was replaced: ', recipe);
-})
-.catch(err => {
-    console.log(err);
-})
+// Recipe.findOneAndUpdate({ title: 'Rigatoni alla Genovese' }, { duration: 100 }, { new: true })
+// .then(recipe => {
+//     console.log('this recipe was replaced: ', recipe);
+// })
+// .catch(err => {
+//     console.log(err);
+// })
 
-Recipe.deleteOne({ name: 'Carrot Cake' })
-.then(recipe => {
-  console.log('this recipe was deleted: ', recipe);
-  //mongoose.connection.close();
-})
-.catch(err => {
-  console.log(err);
-})
+// Recipe.deleteOne({ name: 'Carrot Cake' })
+// .then(recipe => {
+//   console.log('this recipe was deleted: ', recipe);
+//   //mongoose.connection.close();
+// })
+// .catch(err => {
+//   console.log(err);
+// })
+
+// Promise.all([promise1, promise2])
+//   .then(() => {
+//     console.log('done');
+//     mongoose.connection.close();
+//   })
+//   .catch(err => console.error(err));
